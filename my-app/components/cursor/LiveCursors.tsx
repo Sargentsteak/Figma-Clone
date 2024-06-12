@@ -7,7 +7,7 @@ const LiveCursors = ({ others }: LiveCursorProps) => {
   return (
     <>
       {others.map(({ connectionId, presence }) => {
-        if (!presence) return null;
+        if (!presence?.cursor) return null;
 
         return (
           <Cursor
